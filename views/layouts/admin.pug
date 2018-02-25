@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title #{title}
+	link(rel="stylesheet", href="/stylesheets/app.css")
+	block css
+body
+	include ../partials/admin_header
+	block content
+	script(src="/javascripts/app.js")
+	block js

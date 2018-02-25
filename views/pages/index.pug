@@ -1,0 +1,21 @@
+extends ../layouts/front.pug
+
+block css
+	style().
+		.vertical-space{ 
+			margin-top: 100px
+		}
+
+block content
+	div(class='container')
+		div(class='row vertical-space')
+			each student in students
+				div(class='col-md-4')
+					div(class='card')
+						img(class='card-img-top' src='http://via.placeholder.com/350x150' alt="student card")
+						div(class='card-body')
+							h5(class='card-title') #{student.id} | #{student.name} / #{student.age} years old
+							p(class='card-text') #{student.about}
+						div(class='card-footer')
+							h6 Gredu Test
+block js

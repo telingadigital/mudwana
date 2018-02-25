@@ -1,0 +1,32 @@
+extends ../layouts/admin.pug
+
+block css
+	style().
+		.vertical-space {
+			margin-top: 50px;
+		}
+
+block content
+	div(class='container')
+		div(class='row vertical-space')
+			div(class='col-lg-4 offset-lg-4')
+				- var message = messages.message;
+				if message
+					div(class='alert alert-info' role='alert') #{message}
+
+				form(action="/admin/student" method="post")
+					div(class='form-group')
+						label(class='text-light') Name
+						input(type="text" name="name" class='form-control' placeholder='Name' required)
+					div(class='form-group')
+						label(class='text-light') Email
+						input(type="text" name="email" class='form-control' placeholder='Email' required)
+					div(class='form-group')
+						label(class='text-light') Age
+						input(type="text" name="age" class='form-control' placeholder='Age' required)
+					div(class='form-group')
+						label(class='text-light') About
+						textarea(class='form-control' name='about' placeholder='About' required)
+					button(type='submit' class='btn btn-warning') Add
+
+block js

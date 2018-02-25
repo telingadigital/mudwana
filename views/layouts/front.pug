@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title #{title}
+	link(rel="stylesheet", href="/stylesheets/app.css")
+	style(type='text/css').
+		body {
+			background-color: #ff9900;
+		}
+	block css
+body
+	include ../partials/header.pug
+	block content
+	script(src="/javascripts/app.js")
+	block js
